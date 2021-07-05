@@ -9,36 +9,367 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <title>Document</title>
-    
+
 </head>
 
 <body>
 
+    <div class="wizard">
+        <div class="container">
+            <div class="row g-0">
+                <div id="wizard-area" class="col-12 col-lg-8">
+                    <div class="d-flex flex-column mb-4 product-group mb-4">
+                        <div data-group="cpu"
+                            class="wizard_heading w-100 p-2 d-flex flex-column flex-md-row justify-content-between align-items-center mb-2 selected">
+                            <span class="font-weight-semibold wizard_product_heading_name " id="bas">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg> İşlemci </span>
+                            <span
+                                class="wizard_selections flex-column flex-md-row col-12 col-md-6 justify-content-end  mt-md-0">
+                                <span
+                                    class="d-flex flex-row align-items-center mr-md-4 mt-2 mt-md-0 justify-content-between">
+                                    <small class="">Sırala</small>
+                                    <select class="form-control form-filter ">
+                                        <option value="0" selected="">En yeni ürünler</option>
+                                        <option value="1">En düşük fiyat</option>
+                                        <option value="2">En yüksek fiyat</option>
+                                        <option value="3">Ada Göre A &gt; Z</option>
+                                        <option value="4">Ada Göre Z &gt; A</option>
+                                    </select>
+                                </span>
+                                <span class="d-flex flex-row align-items-center justify-content-between mt-2 mt-md-0">
+                                    <small class="">Marka</small>
+                                    <select class="form-control brands_filter">
+                                        <option value="all" selected="">Tüm markalar</option>
+                                        <option>AMD</option>
+                                        <option>INTEL</option>
+                                    </select>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="flex-column wizard_group_content p-4 " id="menu" style="display: none;">
 
-    <section>
-        <div class="one">
-            <h1>Bilgisayar Toplama Sihirbazı</h1>
-        </div>
-    </section>
+                            <div data-image="https://st1.myideasoft.com/shop/dn/82/myassets/products/514/9400.jpg"
+                                data-sku="BX80684I59400-B" data-id="16956514" data-stock="1" data-brand="INTEL"
+                                data-created="2021-05-10 10:50:27"
+                                data-name="INTEL i5 9400 2.9GHz 9MB LGA1151 14nm UHD630 Gaming İşlemci -"
+                                data-price="1809.25" class="row col-12 wizard_product align-items-center mb-3">
+                                <div class="col-12 col-md-2 max-120"><img
+                                        src="https://st1.myideasoft.com/shop/dn/82/myassets/products/210/1-bx8070110400f-1.jpg">
+                                </div>
+                                <div class="col-12 col-md-4 wizard_product_name text-center text-md-left"><b>INTEL i5
+                                        9400 2.9GHz 9MB LGA1151 14nm UHD630 Gaming İşlemci -</b></div>
+                                <div class="col-12 col-md-2 wizard_product_brand text-center"><b>INTEL</b></div>
+                                <div class="col-12 col-md-2 wizard_product_price text-center mt-3 mt-md-0"><b>1.809,25
+                                        ₺</b><br><small>KDV Dahil</small></div>
+                                <div class="col-12 col-md-2 text-center wizard_add_to_list mt-3 mt-md-0"><button
+                                        class="btn btn-success mb-2">Listeye ekle</button><small class="d-block mt-2"><a
+                                            href="/urun/intel-i5-9400-2-9ghz-9mb-lga1151-14nm-uhd630-gaming-islemci"
+                                            title="INTEL i5 9400 2.9GHz 9MB LGA1151 14nm UHD630 Gaming İşlemci -"
+                                            target="_blank">Detayı gör</a></small></div>
+                            </div>
+                            <div data-image="https://st1.myideasoft.com/shop/dn/82/myassets/products/347/ryzen34.jpg"
+                                data-sku="YD2200C5FBBOX" data-id="16894347" data-stock="50" data-brand="AMD"
+                                data-created="2021-01-22 17:47:32"
+                                data-name="YD2200C5FBBOX Ryzen 32200G  3.5GHz 4MB AM4+ 14nm İşlemci"
+                                data-price="1005.55" class="row col-12 wizard_product align-items-center mb-3">
+                                <div class="col-12 col-md-2 max-120"><img
+                                        src="https://st1.myideasoft.com/shop/dn/82/myassets/products/210/1-bx8070110400f-1.jpg">
+                                </div>
+                                <div class="col-12 col-md-4 wizard_product_name text-center text-md-left">
+                                    <b>YD2200C5FBBOX Ryzen 32200G 3.5GHz 4MB AM4+ 14nm İşlemci</b>
+                                </div>
+                                <div class="col-12 col-md-2 wizard_product_brand text-center"><b>AMD</b></div>
+                                <div class="col-12 col-md-2 wizard_product_price text-center mt-3 mt-md-0"><b>1.005,55
+                                        ₺</b><br><small>KDV Dahil</small></div>
+                                <div class="col-12 col-md-2 text-center wizard_add_to_list mt-3 mt-md-0"><button
+                                        class="btn btn-success mb-2">Listeye ekle</button><small class="d-block mt-2"><a
+                                            href="/urun/yd2200c5fbbox-ryzen-32200g-3-5ghz-4mb-am4-14nm-islemci"
+                                            title="YD2200C5FBBOX Ryzen 32200G  3.5GHz 4MB AM4+ 14nm İşlemci"
+                                            target="_blank">Detayı gör</a></small></div>
+                            </div>
+                            <div data-image="https://st1.myideasoft.com/shop/dn/82/myassets/products/210/1-bx8070110400f-1.jpg"
+                                data-sku="ST00134x" data-id="16879210" data-stock="2" data-brand="INTEL"
+                                data-created="2021-01-11 17:52:18"
+                                data-name="INTEL  i5 10400F 2.9GHz 12MB LGA1200 14nm Gaming İşlemci"
+                                data-price="1633.21" class="row col-12 wizard_product align-items-center mb-3">
+                                <div class="col-12 col-md-2 max-120"><img
+                                        src="https://st1.myideasoft.com/shop/dn/82/myassets/products/210/1-bx8070110400f-1.jpg">
+                                </div>
+                                <div class="col-12 col-md-4 wizard_product_name text-center text-md-left"><b>INTEL i5
+                                        10400F 2.9GHz 12MB LGA1200 14nm Gaming İşlemci</b></div>
+                                <div class="col-12 col-md-2 wizard_product_brand text-center"><b>INTEL</b></div>
+                                <div class="col-12 col-md-2 wizard_product_price text-center mt-3 mt-md-0"><b>1.633,21
+                                        ₺</b><br><small>KDV Dahil</small></div>
+                                <div class="col-12 col-md-2 text-center wizard_add_to_list mt-3 mt-md-0"><button
+                                        class="btn btn-success mb-2">Listeye ekle</button><small class="d-block mt-2"><a
+                                            href="/urun/intel-i5-10400f-2-9ghz-12mb-lga1200-14nm-gaming-islemci"
+                                            title="INTEL  i5 10400F 2.9GHz 12MB LGA1200 14nm Gaming İşlemci"
+                                            target="_blank">Detayı gör</a></small></div>
+                            </div>
+                            <div data-image="https://st1.myideasoft.com/shop/dn/82/myassets/products/138/1-yd1600bbafbox-1.jpg"
+                                data-sku="YD1600BBAFBOX" data-id="16593138" data-stock="10" data-brand="AMD"
+                                data-created="2020-12-12 21:03:58"
+                                data-name="YD1600BBAFBOX Ryzen 5 1600 3.4GHz 16MB AM4 12Nm İşlemci" data-price="1352.83"
+                                class="row col-12 wizard_product align-items-center mb-3">
+                                <div class="col-12 col-md-2 max-120"><img
+                                        src="https://st1.myideasoft.com/shop/dn/82/myassets/products/138/1-yd1600bbafbox-1.jpg">
+                                </div>
+                                <div class="col-12 col-md-4 wizard_product_name text-center text-md-left">
+                                    <b>YD1600BBAFBOX Ryzen 5 1600 3.4GHz 16MB AM4 12Nm İşlemci</b>
+                                </div>
+                                <div class="col-12 col-md-2 wizard_product_brand text-center"><b>AMD</b></div>
+                                <div class="col-12 col-md-2 wizard_product_price text-center mt-3 mt-md-0"><b>1.352,83
+                                        ₺</b><br><small>KDV Dahil</small></div>
+                                <div class="col-12 col-md-2 text-center wizard_add_to_list mt-3 mt-md-0"><button
+                                        class="btn btn-success mb-2"><i class="fas fa-check fs-08"></i>
+                                        Listeye Ekle</button><small class="d-block mt-2"><a
+                                            href="/urun/yd1600bbafbox-ryzen-5-1600-3-4ghz-16mb-am4-12nm-islemci"
+                                            title="YD1600BBAFBOX Ryzen 5 1600 3.4GHz 16MB AM4 12Nm İşlemci"
+                                            target="_blank">Detayı gör</a></small></div>
+                            </div>
+                            <div data-image="https://st1.myideasoft.com/shop/dn/82/myassets/products/804/1-bx80684i59600k-1.jpg"
+                                data-sku="BX80684I59600K" data-id="16589804" data-stock="10" data-brand="INTEL"
+                                data-created="2020-12-12 21:03:31"
+                                data-name="BX80684I59600K i5 9600K 3.7GHz 9MB LGA1151 14nm HD630 Gaming İşlemci"
+                                data-price="2436.13" class="row col-12 wizard_product align-items-center mb-3">
+                                <div class="col-12 col-md-2 max-120"><img
+                                        src="https://st1.myideasoft.com/shop/dn/82/myassets/products/804/1-bx80684i59600k-1.jpg">
+                                </div>
+                                <div class="col-12 col-md-4 wizard_product_name text-center text-md-left">
+                                    <b>BX80684I59600K i5 9600K 3.7GHz 9MB LGA1151 14nm HD630 Gaming İşlemci</b>
+                                </div>
+                                <div class="col-12 col-md-2 wizard_product_brand text-center"><b>INTEL</b></div>
+                                <div class="col-12 col-md-2 wizard_product_price text-center mt-3 mt-md-0"><b>2.436,13
+                                        ₺</b><br><small>KDV Dahil</small></div>
+                                <div class="col-12 col-md-2 text-center wizard_add_to_list mt-3 mt-md-0"><button
+                                        class="btn btn-success mb-2">Listeye ekle</button><small class="d-block mt-2"><a
+                                            href="/urun/bx80684i59600k-i5-9600k-3-7ghz-9mb-lga1151-14nm-hd630-gaming-islemci"
+                                            title="BX80684I59600K i5 9600K 3.7GHz 9MB LGA1151 14nm HD630 Gaming İşlemci"
+                                            target="_blank">Detayı gör</a></small></div>
+                            </div>
+                        </div>
+
+                        <div data-group="cpu"
+                            class="wizard_heading w-100 p-2 d-flex flex-column flex-md-row justify-content-between align-items-center mb-2 selected">
+                            <span class="font-weight-semibold wizard_product_heading_name " id="bas1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg> anakart </span>
+                            <span
+                                class="wizard_selections flex-column flex-md-row col-12 col-md-6 justify-content-end  mt-md-0">
+                                <span
+                                    class="d-flex flex-row align-items-center mr-md-4 mt-2 mt-md-0 justify-content-between">
+                                    <small class="">Sırala</small>
+                                    <select class="form-control form-filter ">
+                                        <option value="0" selected="">En yeni ürünler</option>
+                                        <option value="1">En düşük fiyat</option>
+                                        <option value="2">En yüksek fiyat</option>
+                                        <option value="3">Ada Göre A &gt; Z</option>
+                                        <option value="4">Ada Göre Z &gt; A</option>
+                                    </select>
+                                </span>
+                                <span class="d-flex flex-row align-items-center justify-content-between mt-2 mt-md-0">
+                                    <small class="">Marka</small>
+                                    <select class="form-control brands_filter">
+                                        <option value="all" selected="">Tüm markalar</option>
+                                        <option>AMD</option>
+                                        <option>INTEL</option>
+                                    </select>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="flex-column wizard_group_content p-4 " id="menu1" style="display: none;" >
+
+                            <div data-image="https://st1.myideasoft.com/shop/dn/82/myassets/products/514/9400.jpg"
+                                data-sku="BX80684I59400-B" data-id="16956514" data-stock="1" data-brand="INTEL"
+                                data-created="2021-05-10 10:50:27"
+                                data-name="INTEL i5 9400 2.9GHz 9MB LGA1151 14nm UHD630 Gaming İşlemci -"
+                                data-price="1809.25" class="row col-12 wizard_product align-items-center mb-3">
+                                <div class="col-12 col-md-2 max-120"><img
+                                        src="https://st1.myideasoft.com/shop/dn/82/myassets/products/210/1-bx8070110400f-1.jpg">
+                                </div>
+                                <div class="col-12 col-md-4 wizard_product_name text-center text-md-left"><b>INTEL i5
+                                        9400 2.9GHz 9MB LGA1151 14nm UHD630 Gaming İşlemci -</b></div>
+                                <div class="col-12 col-md-2 wizard_product_brand text-center"><b>INTEL</b></div>
+                                <div class="col-12 col-md-2 wizard_product_price text-center mt-3 mt-md-0"><b>1.809,25
+                                        ₺</b><br><small>KDV Dahil</small></div>
+                                <div class="col-12 col-md-2 text-center wizard_add_to_list mt-3 mt-md-0"><button
+                                        class="btn btn-success mb-2">Listeye ekle</button><small class="d-block mt-2"><a
+                                            href="/urun/intel-i5-9400-2-9ghz-9mb-lga1151-14nm-uhd630-gaming-islemci"
+                                            title="INTEL i5 9400 2.9GHz 9MB LGA1151 14nm UHD630 Gaming İşlemci -"
+                                            target="_blank">Detayı gör</a></small></div>
+                            </div>
+                            <div data-image="https://st1.myideasoft.com/shop/dn/82/myassets/products/347/ryzen34.jpg"
+                                data-sku="YD2200C5FBBOX" data-id="16894347" data-stock="50" data-brand="AMD"
+                                data-created="2021-01-22 17:47:32"
+                                data-name="YD2200C5FBBOX Ryzen 32200G  3.5GHz 4MB AM4+ 14nm İşlemci"
+                                data-price="1005.55" class="row col-12 wizard_product align-items-center mb-3">
+                                <div class="col-12 col-md-2 max-120"><img
+                                        src="https://st1.myideasoft.com/shop/dn/82/myassets/products/210/1-bx8070110400f-1.jpg">
+                                </div>
+                                <div class="col-12 col-md-4 wizard_product_name text-center text-md-left">
+                                    <b>YD2200C5FBBOX Ryzen 32200G 3.5GHz 4MB AM4+ 14nm İşlemci</b>
+                                </div>
+                                <div class="col-12 col-md-2 wizard_product_brand text-center"><b>AMD</b></div>
+                                <div class="col-12 col-md-2 wizard_product_price text-center mt-3 mt-md-0"><b>1.005,55
+                                        ₺</b><br><small>KDV Dahil</small></div>
+                                <div class="col-12 col-md-2 text-center wizard_add_to_list mt-3 mt-md-0"><button
+                                        class="btn btn-success mb-2">Listeye ekle</button><small class="d-block mt-2"><a
+                                            href="/urun/yd2200c5fbbox-ryzen-32200g-3-5ghz-4mb-am4-14nm-islemci"
+                                            title="YD2200C5FBBOX Ryzen 32200G  3.5GHz 4MB AM4+ 14nm İşlemci"
+                                            target="_blank">Detayı gör</a></small></div>
+                            </div>
+                            <div data-image="https://st1.myideasoft.com/shop/dn/82/myassets/products/210/1-bx8070110400f-1.jpg"
+                                data-sku="ST00134x" data-id="16879210" data-stock="2" data-brand="INTEL"
+                                data-created="2021-01-11 17:52:18"
+                                data-name="INTEL  i5 10400F 2.9GHz 12MB LGA1200 14nm Gaming İşlemci"
+                                data-price="1633.21" class="row col-12 wizard_product align-items-center mb-3">
+                                <div class="col-12 col-md-2 max-120"><img
+                                        src="https://st1.myideasoft.com/shop/dn/82/myassets/products/210/1-bx8070110400f-1.jpg">
+                                </div>
+                                <div class="col-12 col-md-4 wizard_product_name text-center text-md-left"><b>INTEL i5
+                                        10400F 2.9GHz 12MB LGA1200 14nm Gaming İşlemci</b></div>
+                                <div class="col-12 col-md-2 wizard_product_brand text-center"><b>INTEL</b></div>
+                                <div class="col-12 col-md-2 wizard_product_price text-center mt-3 mt-md-0"><b>1.633,21
+                                        ₺</b><br><small>KDV Dahil</small></div>
+                                <div class="col-12 col-md-2 text-center wizard_add_to_list mt-3 mt-md-0"><button
+                                        class="btn btn-success mb-2">Listeye ekle</button><small class="d-block mt-2"><a
+                                            href="/urun/intel-i5-10400f-2-9ghz-12mb-lga1200-14nm-gaming-islemci"
+                                            title="INTEL  i5 10400F 2.9GHz 12MB LGA1200 14nm Gaming İşlemci"
+                                            target="_blank">Detayı gör</a></small></div>
+                            </div>
+                            <div data-image="https://st1.myideasoft.com/shop/dn/82/myassets/products/138/1-yd1600bbafbox-1.jpg"
+                                data-sku="YD1600BBAFBOX" data-id="16593138" data-stock="10" data-brand="AMD"
+                                data-created="2020-12-12 21:03:58"
+                                data-name="YD1600BBAFBOX Ryzen 5 1600 3.4GHz 16MB AM4 12Nm İşlemci" data-price="1352.83"
+                                class="row col-12 wizard_product align-items-center mb-3">
+                                <div class="col-12 col-md-2 max-120"><img
+                                        src="https://st1.myideasoft.com/shop/dn/82/myassets/products/138/1-yd1600bbafbox-1.jpg">
+                                </div>
+                                <div class="col-12 col-md-4 wizard_product_name text-center text-md-left">
+                                    <b>YD1600BBAFBOX Ryzen 5 1600 3.4GHz 16MB AM4 12Nm İşlemci</b>
+                                </div>
+                                <div class="col-12 col-md-2 wizard_product_brand text-center"><b>AMD</b></div>
+                                <div class="col-12 col-md-2 wizard_product_price text-center mt-3 mt-md-0"><b>1.352,83
+                                        ₺</b><br><small>KDV Dahil</small></div>
+                                <div class="col-12 col-md-2 text-center wizard_add_to_list mt-3 mt-md-0"><button
+                                        class="btn btn-success mb-2"><i class="fas fa-check fs-08"></i>
+                                        Listeye Ekle</button><small class="d-block mt-2"><a
+                                            href="/urun/yd1600bbafbox-ryzen-5-1600-3-4ghz-16mb-am4-12nm-islemci"
+                                            title="YD1600BBAFBOX Ryzen 5 1600 3.4GHz 16MB AM4 12Nm İşlemci"
+                                            target="_blank">Detayı gör</a></small></div>
+                            </div>
+                            <div data-image="https://st1.myideasoft.com/shop/dn/82/myassets/products/804/1-bx80684i59600k-1.jpg"
+                                data-sku="BX80684I59600K" data-id="16589804" data-stock="10" data-brand="INTEL"
+                                data-created="2020-12-12 21:03:31"
+                                data-name="BX80684I59600K i5 9600K 3.7GHz 9MB LGA1151 14nm HD630 Gaming İşlemci"
+                                data-price="2436.13" class="row col-12 wizard_product align-items-center mb-3">
+                                <div class="col-12 col-md-2 max-120"><img
+                                        src="https://st1.myideasoft.com/shop/dn/82/myassets/products/804/1-bx80684i59600k-1.jpg">
+                                </div>
+                                <div class="col-12 col-md-4 wizard_product_name text-center text-md-left">
+                                    <b>BX80684I59600K i5 9600K 3.7GHz 9MB LGA1151 14nm HD630 Gaming İşlemci</b>
+                                </div>
+                                <div class="col-12 col-md-2 wizard_product_brand text-center"><b>INTEL</b></div>
+                                <div class="col-12 col-md-2 wizard_product_price text-center mt-3 mt-md-0"><b>2.436,13
+                                        ₺</b><br><small>KDV Dahil</small></div>
+                                <div class="col-12 col-md-2 text-center wizard_add_to_list mt-3 mt-md-0"><button
+                                        class="btn btn-success mb-2">Listeye ekle</button><small class="d-block mt-2"><a
+                                            href="/urun/bx80684i59600k-i5-9600k-3-7ghz-9mb-lga1151-14nm-hd630-gaming-islemci"
+                                            title="BX80684I59600K i5 9600K 3.7GHz 9MB LGA1151 14nm HD630 Gaming İşlemci"
+                                            target="_blank">Detayı gör</a></small></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-12 col-lg-4 order-1 oreder-md-2 prices">
+                    <div class="product-right-fixed">
+                        <div class="product-right-fixed-2 mb-4">
+                            <h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-list" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                                </svg> Seçimleriniz</h4>
+                            <div id="wizard_cart">
+                                <div class="product-price-special-title wizard_no_product">Listenizde ürün bulunmuyor.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-right-fixed-2">
+                            <div class="product-cart-buttons">
+                                <div class="product-price-container">
+                                    <div class="product-price-special-title">Size Özel</div>
+                                    <div class="product-price-old">
+                                        <img src="//st3.myideasoft.com/shop/dn/82/themes/selftpl_5f0b064fdc9b3/assets/images/icon-tl.svg?revision=7.1.1.0-1606676795"
+                                            alt="">
+                                        <elem id="priceTotal">0<span>,00</span></elem> <b>KDV Dahil</b>
+                                    </div>
+                                    
+                                    
+                                </div>
+
+                               
+                                <div class="product-buttons-wrapper">
+                                    <div class="product-buttons-row">
+                                        <div>
+                                            <a href="javascript:void(0);" class="add-to-cart-button"
+                                                data-context="detail" data-product-id="16572864">SEPETE EKLE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
 
 
 
 
-    <script type="text/javascript" src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+
+
+
+
+                <script>
+                    $(function () {
+                        $("#bas").click(function () {
+                            $("#menu").toggle();
+                        })
+                    })
+                    $(function () {
+                        $("#bas1").click(function () {
+                            $("#menu1").toggle();
+                        })
+                    })
+
+
+                </script>
+
+                <script type="text/javascript" src="index.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                    crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                    crossorigin="anonymous"></script>
 </body>
 
 </html>
